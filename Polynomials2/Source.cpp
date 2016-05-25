@@ -8,11 +8,13 @@ int main() {
 	string poly1, poly2;
 	int choice;
 	cout << "The form of the polynomials should be: ax^n + bx^(n+1) + cx^(n+2) .... ?x^(n+?), where n = 0" << endl;
-	cout << "First Polynomial:";
-	getline(cin, poly1);
-	cout << "\n\nSecond Polynomial:";
-	getline(cin, poly2);
-	Polynomial first(poly1), second(poly2);
+//	cout << "First Polynomial:";
+//	getline(cin, poly1);
+//	cout << "\n\nSecond Polynomial:";
+//	getline(cin, poly2);
+//	Polynomial first(poly1), second(poly2);
+	Polynomial first("2x^0 - x^1 + 2x^2");
+	first.display();
 	cout << "\nWhat would you like to do?";
 	cout << "\n\n(1)Addition\n\n(2)Subtraction\n\n(3)Multiplication\n\n(4)Assignment\n\n(5)Quit\n";
 	cin >> choice;
@@ -24,7 +26,7 @@ int main() {
 		}
 		switch (choice) {
 		case 1: 
-			first + second;
+//			first + second;
 			cout << "\n\n(1)Addition\n\n(2)Subtraction\n\n(3)Multiplication\n\n(4)Assignment\n\n(5)Quit\n";
 			cin >> choice;
 			break;

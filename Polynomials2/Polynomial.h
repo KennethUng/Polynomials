@@ -6,20 +6,21 @@
 //Class declaration of Polynomials
 class Polynomial {
 private:
-	float *coefficient;
-	int *exponent;
-	std::string input;
-	int size;
-	void setSize(std::string);
-	void setPolynomial();
+	float *coefficient; //Completed
+	int *exponent; //??
+	std::string input; //Completed
+	int size; //Completed
+	void setSize(std::string); //Completed
+	void setPolynomial(); //Completed
 public:
-	Polynomial(std::string);
+	~Polynomial();
+	Polynomial(Polynomial &);
+	Polynomial(std::string); //Completed
 	void operator+(Polynomial);
 	void operator-(Polynomial);
 	void operator*(Polynomial);
 	void operator=(Polynomial);
 	void display();
-	int getSize();
-
 };
 #endif
+
