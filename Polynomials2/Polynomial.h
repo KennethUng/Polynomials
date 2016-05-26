@@ -8,18 +8,18 @@ class Polynomial {
 private:
 	float *coefficient; //Completed
 	int *exponent; //??
-	std::string input; //Completed
 	int size; //Completed
 	void setSize(std::string); //Completed
-	void setPolynomial(); //Completed
+	void setPolynomial(std::string); //Completed
 public:
 	~Polynomial();
-	Polynomial(Polynomial &);
+	Polynomial(const Polynomial &);
+	Polynomial();
 	Polynomial(std::string); //Completed
-	void operator+(Polynomial);
-	void operator-(Polynomial);
-	void operator*(Polynomial);
-	void operator=(Polynomial);
+	Polynomial operator+(const Polynomial &);
+	Polynomial operator-(const Polynomial &);
+	Polynomial operator*(const Polynomial &);
+	Polynomial& operator=(const Polynomial &);
 	void display();
 };
 #endif

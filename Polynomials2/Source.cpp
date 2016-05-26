@@ -13,8 +13,12 @@ int main() {
 //	cout << "\n\nSecond Polynomial:";
 //	getline(cin, poly2);
 //	Polynomial first(poly1), second(poly2);
-	Polynomial first("2x^0 - x^1 + 2x^2");
+	Polynomial first("-2.5x^0 - x^1 + 2x^2");
+	Polynomial second("2x^0 + x^1 + x^2 + 3x^3");
+	cout << endl;
 	first.display();
+	cout << endl;
+	second.display();
 	cout << "\nWhat would you like to do?";
 	cout << "\n\n(1)Addition\n\n(2)Subtraction\n\n(3)Multiplication\n\n(4)Assignment\n\n(5)Quit\n";
 	cin >> choice;
@@ -25,23 +29,47 @@ int main() {
 			cin >> choice;
 		}
 		switch (choice) {
-		case 1: 
-//			first + second;
+		case 1: {
+			Polynomial third = first + second;
+			cout << "(";
+			first.display();
+			cout << ") + (";
+			second.display();
+			cout << ") = ";
+			third.display();
 			cout << "\n\n(1)Addition\n\n(2)Subtraction\n\n(3)Multiplication\n\n(4)Assignment\n\n(5)Quit\n";
 			cin >> choice;
 			break;
-		case 2:
-			//first - second;
+		}
+		case 2: {
+			Polynomial third = first - second;
+			cout << "(";
+			first.display();
+			cout << ") - (";
+			second.display();
+			cout << ") = ";
+			third.display();
 			cout << "\n\n(1)Addition\n\n(2)Subtraction\n\n(3)Multiplication\n\n(4)Assignment\n\n(5)Quit\n";
 			cin >> choice;
 			break;
-		case 3:
-			//first * second;
+		}
+		case 3: {
+			Polynomial third = first * second;
+			cout << "(";
+			first.display();
+			cout << ") * (";
+			second.display();
+			cout << ") = ";
+			third.display();
 			cout << "\n\n(1)Addition\n\n(2)Subtraction\n\n(3)Multiplication\n\n(4)Assignment\n\n(5)Quit\n";
 			cin >> choice;
 			break;
+		}
 		case 4:
-			//first = second;
+			first = second;
+			first.display();
+			cout << " = ";
+			second.display();
 			cout << "\n\n(1)Addition\n\n(2)Subtraction\n\n(3)Multiplication\n\n(4)Assignment\n\n(5)Quit\n";
 			cin >> choice;
 			break;
