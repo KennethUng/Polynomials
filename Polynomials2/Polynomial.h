@@ -1,4 +1,8 @@
-
+/*
+* Created by : Kenneth Ung
+* Date : 5/26/16
+* Project 3 : Polynomials
+*/
 #ifndef POLYNOMIAL_H
 #define POLYNOMIAL_H
 #include <string>
@@ -7,20 +11,20 @@
 class Polynomial {
 private:
 	float *coefficient; //Completed
-	int *exponent; //??
+	int *exponent; //Completed
 	int size; //Completed
 	void setSize(std::string); //Completed
 	void setPolynomial(std::string); //Completed
 public:
-	~Polynomial();
-	Polynomial(const Polynomial &);
-	Polynomial();
+	~Polynomial();//Completed
+	Polynomial(const Polynomial &);//Completed
+	Polynomial();//Completed
 	Polynomial(std::string); //Completed
-	Polynomial operator+(const Polynomial &);
-	Polynomial operator-(const Polynomial &);
-	Polynomial operator*(const Polynomial &);
-	Polynomial& operator=(const Polynomial &);
-	void display();
+	Polynomial operator+(const Polynomial &);//Completed
+	Polynomial operator-(const Polynomial &);//Completed
+	Polynomial operator*(const Polynomial &);//Completed
+	Polynomial& operator=(const Polynomial &);//Completed
+	void display();//Completed
 };
 #endif
 
